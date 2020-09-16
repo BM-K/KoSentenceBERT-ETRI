@@ -33,7 +33,8 @@ python con_training_sts.py  # NLI 데이터로 학습 후 STS 데이터로 Fine-
 ```
 
 ## Pre-Trained Models
-Pre-Trained 모델은 output 디렉토리에 저장 되어 있습니다.
+pooling mode는 mean tokens를 사용하였으며, Pre-Trained 모델은 output 디렉토리에 저장 되어 있습니다. <br>
+학습된 파일이 너무 커 올릴 수 없기에 klbm126@gmail.com 으로 연락 주시면 드리겠습니다. <br>
 |디렉토리|학습방법|
 |-----------|:----:|
 |training_**nli**_ETRI_KoBERT-003_bert_eojeol|Only Train NLI|
@@ -48,7 +49,7 @@ Pre-Trained 모델은 output 디렉토리에 저장 되어 있습니다.
 |STS + NLI|**80.92**|**81.34**|**79.83**|**80.12**|**79.83**|**80.15**|**76.67**|**76.75**|
 
 ## Application Examples
-생성 된 문장 임베딩을 다운 스트림 애플리케이션에 사용할 수있는 방법에 대한 몇 가지 예를 제시합니다.
+생성 된 문장 임베딩을 다운 스트림 애플리케이션에 사용할 수 있는 방법에 대한 몇 가지 예를 제시합니다.
 <br> 제일 높은 성능을 내는 STS + NLI pretrained 모델을 통해 진행합니다.
 
 ### Semantic Search
