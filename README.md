@@ -3,7 +3,7 @@ Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks (EMNLP 2019) 논�
 
 ## Installation
 ETRI KorBERT는 transformers 2.4.1 ~ 2.8.0에서만 동작하고 Sentence-BERT는 3.1.0 버전 이상에서 동작하여 두 라이브러리를 수정하였습니다. <br>
-huggingface transformer, sentence transformers 라이브러리 코드를 직접 수정하므로 가상환경 사용을 권장합니다.  <br>
+huggingface transformer, sentence transformers, tokenizers 라이브러리 코드를 직접 수정하므로 가상환경 사용을 권장합니다.  <br>
 ETRI KoBERT를 사용하여 학습하였고 본 레파지토리에선 ETRI KoBERT를 제공하지 않습니다.
 ```
 git clone https://github.com/BM-K/KoSentenceBERT.git
@@ -11,7 +11,7 @@ python -m venv .KoSBERT
 . .KoSBERT/bin/activate
 pip install -r requirements.txt
 ```
-transformer, sentence_transformers 디렉토리를 .KoSBERT/lib/python3.7/site-packages/ 로 이동합니다. <br>
+transformer, tokenizers, sentence_transformers 디렉토리를 .KoSBERT/lib/python3.7/site-packages/ 로 이동합니다. <br>
 ETRI_KoBERT 모델과 tokenizer가 KoSentenceBERT 디렉토리 안에 존재하여야 합니다.<br>
 ETRI 모델과 tokenizer는 다음 예시와 같이 불러옵니다 :
 
