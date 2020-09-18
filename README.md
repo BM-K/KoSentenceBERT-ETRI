@@ -99,7 +99,7 @@ for query in queries:
         print(corpus[idx].strip(), "(Score: %.4f)" % (cos_scores[idx]))
         
 ```
-<br>output은 다음과 같습니다 :
+<br> 다음과 같습니다 :
 ```
 ======================
 
