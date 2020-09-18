@@ -33,7 +33,7 @@ python con_training_sts.py  # NLI 데이터로 학습 후 STS 데이터로 Fine-
 ```
 
 ## Pre-Trained Models
-pooling mode는 mean tokens를 사용하였으며, Pre-Trained 모델은 output 디렉토리에 저장 되어 있습니다. <br>
+**pooling mode**는 **mean tokens**를 사용하였으며, Pre-Trained 모델은 output 디렉토리에 저장 되어 있습니다. <br>
 학습된 파일이 너무 커 올릴 수 없기에 klbm126@gmail.com 으로 연락 주시면 드리겠습니다. <br>
 |디렉토리|학습방법|
 |-----------|:----:|
