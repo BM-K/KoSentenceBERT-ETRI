@@ -24,6 +24,7 @@ self.tokenizer = BertTokenizer.from_pretrained('./ETRI_KoBERT/003_bert_eojeol_py
 ## Train Models
 모델 학습을 원하시면 KoSentenceBERT 디렉토리 안에 KorNLUDatasets이 존재하여야 합니다. <br>
 저는 STS를 학습할 때에 모델 구조에 맞게 STS데이터를 수정하여 사용하였고 데이터와 학습 방법은 아래와 같습니다 : <br><br>
+KoSentenceBERT/KorNLUDatates/KorSTS/tune_test.tsv <br>
 <img src="https://user-images.githubusercontent.com/55969260/93304207-97afec00-f837-11ea-88a2-7256f2f1664e.png"></img>
 *STS test 데이터셋의 일부* <br>
 ```
