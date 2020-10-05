@@ -34,7 +34,7 @@ python con_training_sts.py  # NLI 데이터로 학습 후 STS 데이터로 Fine-
 ```
 
 ## Pre-Trained Models
-**pooling mode**는 **mean tokens [MEAN-strategy]**를 사용하였으며, 학습시 모델은 output 디렉토리에 저장 됩니다. <br>
+**pooling mode**는 **MEAN-strategy**를 사용하였으며, 학습시 모델은 output 디렉토리에 저장 됩니다. <br>
 |디렉토리|학습방법|
 |-----------|:----:|
 |training_**nli**_ETRI_KoBERT-003_bert_eojeol|Only Train NLI|
