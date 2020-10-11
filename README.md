@@ -42,11 +42,12 @@ python con_training_sts.py  # NLI 데이터로 학습 후 STS 데이터로 Fine-
 |training_**nli_sts**_ETRI_KoBERT-003_bert_eojeol|STS + NLI|
 
 ## Performance
+Seed 고정
 |Model|Cosine Pearson|Cosine Spearman|Euclidean Pearson|Euclidean Spearman|Manhattan Pearson|Manhattan Spearman|Dot Pearson|Dot Spearman|
 |:------------------------:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-|NLl|71.13|73.97|72.85|73.08|72.92|73.07|68.96|68.77|
-|STS|80.75|80.39|79.03|78.81|78.97|78.76|73.04|73.65|
-|STS + NLI|**80.92**|**81.34**|**79.83**|**80.12**|**79.83**|**80.15**|**76.67**|**76.75**|
+|NLl|71.41|74.00|73.41|73.41|73.52|73.40|69.28|69.09|
+|STS|**80.43**|79.99|78.18|78.03|78.13|77.99|73.73|73.40|
+|STS + NLI|80.10|**80.42**|**79.14**|**79.28**|**79.08**|**79.22**|**74.46**|**74.16**|
 
 ## Application Examples
 생성 된 문장 임베딩을 다운 스트림 애플리케이션에 사용할 수 있는 방법에 대한 몇 가지 예를 제시합니다.
