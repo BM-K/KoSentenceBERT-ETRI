@@ -202,6 +202,8 @@ Cluster  4
 Cluster  5
 ['원숭이 한 마리가 드럼을 연주한다.', '고릴라 의상을 입은 누군가가 드럼을 연주하고 있다.']
 ```
+<img src = "https://user-images.githubusercontent.com/55969260/96250228-78001500-0fe9-11eb-9ee5-914705182a55.png">
+
 ## Citing
 ### KorNLU Datasets
 ```bibtex
