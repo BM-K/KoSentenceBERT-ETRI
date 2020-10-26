@@ -42,7 +42,7 @@ python con_training_sts.py  # NLI 데이터로 학습 후 STS 데이터로 Fine-
 |training_**nli_sts**_ETRI_KoBERT-003_bert_eojeol|STS + NLI|
 
 ## Performance
-Seed 고정, Dev 
+Seed 고정, Dev set
 |Model|Cosine Pearson|Cosine Spearman|Euclidean Pearson|Euclidean Spearman|Manhattan Pearson|Manhattan Spearman|Dot Pearson|Dot Spearman|
 |:------------------------:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
 |NLl|67.96|70.45|71.06|70.48|71.17|70.51|64.87|63.04|
