@@ -49,6 +49,8 @@ Seed 고정, Dev set
 |STS|**80.43**|79.99|78.18|78.03|78.13|77.99|73.73|73.40|
 |STS + NLI|80.10|**80.42**|**79.14**|**79.28**|**79.08**|**79.22**|**74.46**|**74.16**|
 
+향상된 모델 성능은 다음 레파지토리에 있습니다. <br> https://github.com/BM-K/KoSentenceBERT_V2
+
 ## Application Examples
 생성 된 문장 임베딩을 다운 스트림 애플리케이션에 사용할 수 있는 방법에 대한 몇 가지 예를 제시합니다.
 <br> 제일 높은 성능을 내는 STS + NLI pretrained 모델을 통해 진행합니다.
@@ -206,7 +208,7 @@ Cluster  5
 
 ## Downstream Tasks Demo
 <img src = "https://user-images.githubusercontent.com/55969260/97133748-5b54a180-178e-11eb-8c80-04291456d561.gif"> <br>
-데모 영상으로 제작된 버전은 다음 레퍼지토리에 있습니다. <br> https://github.com/BM-K/KoSentenceBERT_V2
+데모 영상으로 제작된 버전은 다음 레파지토리에 있습니다. <br> https://github.com/BM-K/KoSentenceBERT_V2
 
 ## Citing
 ### KorNLU Datasets
