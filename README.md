@@ -204,8 +204,9 @@ Cluster  5
 ```
 <img src = "https://user-images.githubusercontent.com/55969260/96250228-78001500-0fe9-11eb-9ee5-914705182a55.png">
 
-## Demo
-데모 영상 및 version2는 다음 레퍼지토리에 있습니다. <br> https://github.com/BM-K/KoSentenceBERT_V2
+## Downstream Tasks Demo
+<img src = "https://user-images.githubusercontent.com/55969260/97133748-5b54a180-178e-11eb-8c80-04291456d561.gif"> <br>
+데모 영상으로 제작된 버전은 다음 레퍼지토리에 있습니다. <br> https://github.com/BM-K/KoSentenceBERT_V2
 
 ## Citing
 ### KorNLU Datasets
