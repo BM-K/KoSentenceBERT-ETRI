@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Shake Carrots</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="/" class="active">Home</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>Semantic Search</h2>
+									<p style="font-size:60%;">Query 입력 시 Corpus에서 유사한 문장 검색</p>
+								</header>
+								<ul class="features">
+
+									<li>
+										<span class="image"><img src="{{url_for('static', filename='images/corpus.png')}}" style="width:360px;height:450px"; /></span>
+									</li>
+
+									<li>
+									<form action="/semantic_search" method="get">
+        							<p>Query : <input type="text" name="query"> <br>
+												<input type="submit" value="Submit"></p>
+    							</form>
+									</li>
+
+									<li>
+										<strong>Query : {{value}}</strong>
+										<h3>Top 5 most similar sentences :</h3>
+										{%for idx in result[0:5]%}
+										<p style="font-size:70%; font-weight: bold; float:center;" >{{corpus[idx].strip()}} {{"(Score: %.4f)" % (cos_scores[idx])}}</p>
+										{%endfor%}
+									</li>
+									<!--
+									<li>
+										<span class="icon major style3 fa-copy"></span>
+										<h3>Amed sed feugiat</h3>
+										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+									</li>
+									<li>
+										<span class="icon major style5 fa-diamond"></span>
+										<h3>Dolor nullam</h3>
+										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+									</li>
+								-->
+								</ul>
+							</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/jquery.scrollex.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/skel.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+
+	</body>
+</html>

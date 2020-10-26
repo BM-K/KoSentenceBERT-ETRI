@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Shake Carrots</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="{{url_for('static', filename='images/_klogo.svg')}}" style="width:150px;height:150px";/></span>
+						<h2>BM-K</h2>
+						<p>Korean Sentence BERT<br />
+						<a href="https://github.com/BM-K">github.com/BM-K</a></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#first">Semantic Search</a></li>
+							<li><a href="#second2">Clustering</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Korean Sentence BERT</h2>
+										</header>
+										<p>문장에 대한 함축적 의미를 포함하고 있는 문장 임베딩은 문장 간의 유사도 측정, Clustering 등의 Downstream
+Application에 적용 될 수 있다. 본 논문에서는 SBERT를 한국어 데이터에 적용하여 KorSBERT 모델을 학습한 결과를 제시하고, 기존의 SBERT가 가지는 문제점을 근거로 모델 구조를 변경해 성능을 향상시킨다. Pearson
+correlation과 Spearman’s rank correlation을 사용하여성능을 평가한다.</p>
+										<ul class="actions">
+											<li><a href="https://github.com/BM-K/KoSentenceBERT" class="button">KorSBERT</a></li>
+											<li><a href="https://github.com/UKPLab/sentence-transformers" class="button">SBERT</a></li>
+											<li><a href="https://arxiv.org/pdf/1908.10084.pdf" class="button">SBERT-Paper</a></li>
+										</ul>
+									</div>
+									<span class="image"><img src="{{url_for('static', filename='images/carrot.jpg')}}" alt="";/></span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>Semantic Search</h2>
+								</header>
+								<ul class="features">
+
+									<li>
+										<span class="icon major style1 fa-code"></span>
+										<h3>Notice</h3>
+										<pre style="font-size:80%;">Query 입력 시 Corpus에서 유사한 문장 검색.
+Corpus는 수정할 수 없으며,
+Query Example을 참고해서 날려주자!
+										</pre>
+									</li>
+
+									<li>
+										<span class="image"><img src="{{url_for('static', filename='images/corpus.png')}}" style="width:360px;height:450px";/></span>
+									</li>
+
+									<li>
+									<form action="/semantic_search" method="get">
+        							<p>Query : <input type="text" name="query" placeholder="한 남자가 파스타를 먹는다."> <br>
+												<input type="submit" value="Submit"></p>
+    							</form>
+									</li>
+									<!--
+									<li>
+										<span class="icon major style1 fa-code"></span>
+										<h3>Ipsum consequat</h3>
+										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+									</li>
+									<li>
+										<span class="icon major style3 fa-copy"></span>
+										<h3>Amed sed feugiat</h3>
+										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+									</li>
+									<li>
+										<span class="icon major style5 fa-diamond"></span>
+										<h3>Dolor nullam</h3>
+										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+									</li>
+								-->
+								</ul>
+							</section>
+
+							<!-- Second Section -->
+								<section id="second2" class="main special">
+									<header class="major">
+										<h2>Clustering</h2>
+									</header>
+									<ul class="features">
+										<li>
+											<span class="icon major style1 fa-code"></span>
+											<h3>Notice</h3>
+											<pre style="font-size:80%;">Corpus 입력 시 Clustering.
+Corpus 예시는 오른쪽에 적혀있음!
+Corpus는 사용자가 임의로
+지정해서 넣을 수 있다.
+문장 입력 시 개행을 넣어줘야 인식한다!
+최대 16문장까지만 동작한다!
+</pre>
+										</li>
+										<li>
+										<form action="/clustering" method="post">
+	        							<p>Corpus : <textarea clos="100" rows="15" type="text" name="corpus" style="font-size:80%;">
+한 남자가 음식을 먹는다.
+한 남자가 빵 한 조각을 먹는다.
+그 여자가 아이를 돌본다.
+한 남자가 말을 탄다.
+한 여자가 바이올린을 연주한다.
+두 남자가 수레를 숲 속으로 밀었다.
+한 남자가 담으로 싸인 땅에서 백마를 타고 있다.
+원숭이 한 마리가 드럼을 연주한다.
+치타 한 마리가 먹이 뒤에서 달리고 있다.
+한 남자가 파스타를 먹는다.
+고릴라 의상을 입은 누군가가 드럼을 연주하고 있다.
+치타가 들판을 가로 질러 먹이를 쫓는다.</textarea>
+													<br>
+													<input type="submit" value="Submit"></p>
+	    							</form>
+									</li>
+										<!--
+										<li>
+											<span class="icon major style1 fa-code"></span>
+											<h3>Ipsum consequat</h3>
+											<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										</li>
+										<li>
+											<span class="icon major style3 fa-copy"></span>
+											<h3>Amed sed feugiat</h3>
+											<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										</li>
+										<li>
+											<span class="icon major style5 fa-diamond"></span>
+											<h3>Dolor nullam</h3>
+											<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										</li>
+									-->
+									</ul>
+								</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/jquery.scrollex.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/skel.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+
+	</body>
+</html>

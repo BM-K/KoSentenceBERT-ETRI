@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Shake Carrots</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="{{url_for('static', filename='images/_klogo.svg')}}" style="width:150px;height:150px";/></span>
+						<h2>BM-K</h2>
+						<p>Korean Sentence BERT<br />
+						<a href="https://github.com/BM-K">github.com/BM-K</a></p>
+					</header>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="/" class="active">Home</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<section id="second2" class="main special">
+							<header class="major">
+								<h2>Clustering</h2>
+								<p style="font-size:60%;">Corpus 입력 시 Clustering</p>
+							</header>
+							{% if is_over %}
+							<p>문장이 16개가 넘어요!<p>
+							{% else %}
+								<ul class="features">
+
+									<li>
+										{%for sen in value:%}
+										<p style="font-size:63%;font-weight: bold; float:left;">
+											{{"|Sen "}}{{loop.index}}{{" : "}}{{sen}}{{"|"}}
+										</p>
+										{%endfor%}
+									</li>
+
+									<li>
+										{%for cluster in clustered_sentences:%}
+										<p style="font-size:70%; font-weight: bold;"> {{"Cluster "}} {{loop.index}}</p>
+										<p style="font-size:70%;">{{cluster}}</p>
+										{%endfor%}
+									</li>
+
+									<li>
+										<img src = "{{show_image}}" style="width:490px;height:440px";>
+										<h3>K-Means Clustering (k=5)</h3>
+									</li>
+							</ul>
+						{% endif %}
+						</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/jquery.scrollex.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/skel.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+
+	</body>
+</html>
