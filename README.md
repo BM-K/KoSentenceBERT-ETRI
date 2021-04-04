@@ -52,8 +52,6 @@ Seed 고정, test set
 |STS|**80.43**|79.99|78.18|78.03|78.13|77.99|73.73|73.40|
 |STS + NLI|80.10|**80.42**|**79.14**|**79.28**|**79.08**|**79.22**|**74.46**|**74.16**|
 
-향상된 모델 성능은 다음 레파지토리에 있습니다. <br> https://github.com/BM-K/KoSentenceBERT_V2
-
 ## Application Examples
 생성 된 문장 임베딩을 다운 스트림 애플리케이션에 사용할 수 있는 방법에 대한 몇 가지 예를 제시합니다.
 <br> 제일 높은 성능을 내는 STS + NLI pretrained 모델을 통해 진행합니다.
@@ -213,8 +211,6 @@ Cluster  5
 <img src = "https://user-images.githubusercontent.com/55969260/99897723-73610780-2cdf-11eb-9b71-3d31a309a53a.gif"> <br>
 <img src = "https://user-images.githubusercontent.com/55969260/99897743-94295d00-2cdf-11eb-9b16-d6fec66e43d0.gif"> <br>
 <img src = "https://user-images.githubusercontent.com/55969260/99897764-a73c2d00-2cdf-11eb-8bcf-0235d1fda0f7.gif"> <br>
-Retrieval ChatBot에 사용한 데이터는 다음과 같습니다. <br>https://github.com/songys/Chatbot_data<br>
-데모 영상으로 제작된 버전은 다음 레파지토리에 있습니다. <br> https://github.com/BM-K/KoSentenceBERT_V2
 
 ## Citing
 ### KorNLU Datasets
