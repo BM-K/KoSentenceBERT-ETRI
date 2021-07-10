@@ -2,33 +2,33 @@
 Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks (EMNLP 2019) 논문, kakaobrain 팀이 공개한 KorNLUDatasets 과 ETRI KorBERT를 통해 Korean Sentence BERT를 학습하였습니다.
 
 ## Installation
-ETRI KorBERT는 transformers 2.4.1 ~ 2.8.0에서만 동작하고 Sentence-BERT는 3.1.0 버전 이상에서 동작하여 라이브러리를 수정하였습니다. <br>
-**huggingface transformer, sentence transformers, tokenizers** 라이브러리 코드를 직접 수정하므로 가상환경 사용을 권장합니다.  <br>
-사용한 Docker image는 Docker Hub에 첨부합니다. https://hub.docker.com/r/klbm126/kosbert_image/tags <br>
-ETRI KoBERT를 사용하여 학습하였고 본 레파지토리에선 ETRI KoBERT를 제공하지 않습니다. <br>
-<br>**SKT KoBERT를 사용한 버전은 다음 레파지토리에 공개되어 있습니다. <br> 본 레파지토리에서 학습이 안 되시는 경우 다음 레파지토리를 참고해 보셔도 좋을 것 같습니다. <br>
-https://github.com/BM-K/KoSentenceBERT_SKTBERT <br>**
+ - ETRI KorBERT는 transformers 2.4.1 ~ 2.8.0에서만 동작하고 Sentence-BERT는 3.1.0 버전 이상에서 동작하여 라이브러리를 수정하였습니다. <br>
+ - **huggingface transformer, sentence transformers, tokenizers** 라이브러리 코드를 직접 수정하므로 가상환경 사용을 권장합니다.  <br>
+ - 사용한 Docker image는 Docker Hub에 첨부합니다. https://hub.docker.com/r/klbm126/kosbert_image/tags <br>
+ - ETRI KoBERT를 사용하여 학습하였고 본 레파지토리에선 ETRI KoBERT를 제공하지 않습니다. <br>
+ - **SKT KoBERT**를 사용한 버전은 다음 레파지토리에 공개되어 있습니다. <br>
+ - https://github.com/BM-K/KoSentenceBERT_SKTBERT <br>
 ```
 git clone https://github.com/BM-K/KoSentenceBERT.git
 python -m venv .KoSBERT
 . .KoSBERT/bin/activate
 pip install -r requirements.txt
 ```
-transformer, tokenizers, sentence_transformers 디렉토리를 .KoSBERT/lib/python3.7/site-packages/ 로 이동합니다. <br>
-ETRI_KoBERT 모델과 tokenizer가 KoSentenceBERT 디렉토리 안에 존재하여야 합니다.<br>
-ETRI 모델과 tokenizer는 다음 예시와 같이 불러옵니다 :
+ - transformer, tokenizers, sentence_transformers 디렉토리를 .KoSBERT/lib/python3.7/site-packages/ 로 이동합니다. <br>
+ - ETRI_KoBERT 모델과 tokenizer가 KoSentenceBERT 디렉토리 안에 존재하여야 합니다.<br>
+ - ETRI 모델과 tokenizer는 다음 예시와 같이 불러옵니다 :
 
-```python
-from ETRI_tok.tokenization_etri_eojeol import BertTokenizer
-self.auto_model = BertModel.from_pretrained('./ETRI_KoBERT/003_bert_eojeol_pytorch') 
-self.tokenizer = BertTokenizer.from_pretrained('./ETRI_KoBERT/003_bert_eojeol_pytorch/vocab.txt', do_lower_case=False)
-```
+ ```python
+ from ETRI_tok.tokenization_etri_eojeol import BertTokenizer
+ self.auto_model = BertModel.from_pretrained('./ETRI_KoBERT/003_bert_eojeol_pytorch') 
+ self.tokenizer = BertTokenizer.from_pretrained('./ETRI_KoBERT/003_bert_eojeol_pytorch/vocab.txt', do_lower_case=False)
+ ```
 
 ## Train Models
-모델 학습을 원하시면 KoSentenceBERT 디렉토리 안에 KorNLUDatasets이 존재하여야 합니다. <br>
-저는 STS를 학습할 때에 모델 구조에 맞게 STS데이터를 수정하여 사용하였고 데이터와 학습 방법은 아래와 같습니다 : <br><br>
+ - 모델 학습을 원하시면 KoSentenceBERT 디렉토리 안에 KorNLUDatasets이 존재하여야 합니다. <br>
+ - STS 학습 시 모델 구조에 맞게 데이터를 수정하여 사용하였으며, 데이터와 학습 방법은 아래와 같습니다 : <br><br>
 KoSentenceBERT/KorNLUDatasets/KorSTS/tune_test.tsv <br>
-<img src="https://user-images.githubusercontent.com/55969260/93304207-97afec00-f837-11ea-88a2-7256f2f1664e.png"></img>
+<img src="https://user-images.githubusercontent.com/55969260/93304207-97afec00-f837-11ea-88a2-7256f2f1664e.png"></img><br>
 *STS test 데이터셋의 일부* <br>
 ```
 python training_nli.py      # NLI 데이터로만 학습
@@ -53,8 +53,8 @@ Seed 고정, test set
 |STS + NLI|80.10|**80.42**|**79.14**|**79.28**|**79.08**|**79.22**|**74.46**|**74.16**|
 
 ## Application Examples
-생성 된 문장 임베딩을 다운 스트림 애플리케이션에 사용할 수 있는 방법에 대한 몇 가지 예를 제시합니다.
-<br> 제일 높은 성능을 내는 STS + NLI pretrained 모델을 통해 진행합니다.
+- 생성 된 문장 임베딩을 다운 스트림 애플리케이션에 사용할 수 있는 방법에 대한 몇 가지 예를 제시합니다.
+- STS + NLI pretrained 모델을 통해 진행합니다.
 
 ### Semantic Search
 SemanticSearch.py는 주어진 문장과 유사한 문장을 찾는 작업입니다.<br>
