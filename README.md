@@ -4,10 +4,11 @@ Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks (EMNLP 2019) 논�
 ## Installation
  - ETRI KorBERT는 transformers 2.4.1 ~ 2.8.0에서만 동작하고 Sentence-BERT는 3.1.0 버전 이상에서 동작하여 라이브러리를 수정하였습니다. <br>
  - **huggingface transformer, sentence transformers, tokenizers** 라이브러리 코드를 직접 수정하므로 가상환경 사용을 권장합니다.  <br>
- - 사용한 Docker image는 Docker Hub에 첨부합니다. https://hub.docker.com/r/klbm126/kosbert_image/tags <br>
+ - 사용한 Docker image는 Docker Hub에 첨부합니다. <br>
+     - https://hub.docker.com/r/klbm126/kosbert_image/tags <br>
  - ETRI KoBERT를 사용하여 학습하였고 본 레파지토리에선 ETRI KoBERT를 제공하지 않습니다. <br>
  - **SKT KoBERT**를 사용한 버전은 다음 레파지토리에 공개되어 있습니다. <br>
- - https://github.com/BM-K/KoSentenceBERT_SKTBERT <br>
+     - https://github.com/BM-K/KoSentenceBERT_SKTBERT <br>
 ```
 git clone https://github.com/BM-K/KoSentenceBERT.git
 python -m venv .KoSBERT
