@@ -394,8 +394,8 @@ class SentenceTransformer(nn.Sequential):
                     if max_ < feature_lists[feature_name][i].size(-1):
                         max_ = feature_lists[feature_name][i].size(-1)
                 
-                new_data = torch.ones(16, max_, dtype=torch.int64)
-               
+                new_data = torch.ones(len(feature_lists[feature_name]), max_, dtype=torch.int64)
+                
                 for i in range(len(feature_lists[feature_name])):
                     epo = max_ - feature_lists[feature_name][i].size(-1)
                     copy_feature = copy.deepcopy(feature_lists[feature_name][i].squeeze(0))
