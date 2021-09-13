@@ -1401,7 +1401,7 @@ class PreTrainedTokenizer(object):
                 ids,
                 pair_ids=pair_ids,
                 num_tokens_to_remove=total_len - max_length,
-                truncation_strategy=truncation_strategy,
+                #truncation_strategy=truncation_strategy,
                 stride=stride,
             )
             if return_overflowing_tokens:
