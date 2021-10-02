@@ -1,6 +1,5 @@
 # Ko-Sentence-BERT
- - Korean SentenceBERT : Sentence Embeddings using Siamese BERT-Networks using ETRI KoBERT and kakaobrain KorNLU dataset
-   - [SBERT](https://arxiv.org/abs/1908.10084)
+🌷 Korean SentenceBERT : Sentence Embeddings using Siamese BERT-Networks using ETRI KoBERT and kakaobrain KorNLU dataset
 
 ## Installation
  - ETRI KorBERT는 transformers 2.4.1 ~ 2.8.0에서만 동작하고 Sentence-BERT는 3.1.0 버전 이상에서 동작하여 라이브러리를 수정하였습니다. <br>
