@@ -13,7 +13,7 @@ logging.basicConfig(format='%(asctime)s - %(message)s',
                     level=logging.INFO,
                     handlers=[LoggingHandler()])
 
-model_name = './output/training_nli_ETRI_KoBERT-003_bert_eojeol' #'bert-base-nli-mean-tokens'
+model_name = './output/training_nli_ETRI_KoBERT-003_bert_eojeol'
 train_batch_size = 16
 num_epochs = 4
 model_save_path = 'output/training_stsbenchmark_continue_training-'+model_name+'-'+datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
