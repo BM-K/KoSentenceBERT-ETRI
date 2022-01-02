@@ -54,7 +54,7 @@ python con_training_sts.py  # NLI 데이터로 학습 후 STS 데이터로 Fine-
 |STS|**80.43**|79.99|78.18|78.03|78.13|77.99|73.73|73.40|
 |STS + NLI|80.10|**80.42**|**79.14**|**79.28**|**79.08**|**79.22**|**74.46**|**74.16**|
 
-- Performance comparison with other models https://github.com/BM-K/Sentence-Embedding-is-all-you-need#performance .
+- Performance comparison with other models [[KLUE-PLMs]](https://github.com/BM-K/Sentence-Embedding-is-all-you-need#performance).
 
 ## Application Examples
 - 생성 된 문장 임베딩을 다운 스트림 애플리케이션에 사용할 수 있는 방법에 대한 몇 가지 예를 제시합니다.
