@@ -217,16 +217,6 @@ Cluster  5
 <img src = "https://user-images.githubusercontent.com/55969260/99897764-a73c2d00-2cdf-11eb-8bcf-0235d1fda0f7.gif"> <br>
 
 ## Citing
-### KorNLU Datasets
-```bibtex
-@article{ham2020kornli,
-  title={KorNLI and KorSTS: New Benchmark Datasets for Korean Natural Language Understanding},
-  author={Ham, Jiyeon and Choe, Yo Joong and Park, Kyubyong and Choi, Ilji and Soh, Hyungjoon},
-  journal={arXiv preprint arXiv:2004.03289},
-  year={2020}
-}
-```
-### Sentence Transformers: Multilingual Sentence Embeddings using BERT / RoBERTa / XLM-RoBERTa & Co. with PyTorch
 ```bibtex
 @inproceedings{reimers-2019-sentence-bert,
     title = "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
@@ -237,7 +227,6 @@ Cluster  5
     publisher = "Association for Computational Linguistics",
     url = "http://arxiv.org/abs/1908.10084",
 }
-
 @article{reimers-2020-multilingual-sentence-bert,
     title = "Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation",
     author = "Reimers, Nils and Gurevych, Iryna",
@@ -245,6 +234,12 @@ Cluster  5
     month = "04",
     year = "2020",
     url = "http://arxiv.org/abs/2004.09813",
+}
+@article{ham2020kornli,
+  title={KorNLI and KorSTS: New Benchmark Datasets for Korean Natural Language Understanding},
+  author={Ham, Jiyeon and Choe, Yo Joong and Park, Kyubyong and Choi, Ilji and Soh, Hyungjoon},
+  journal={arXiv preprint arXiv:2004.03289},
+  year={2020}
 }
 ```
 
