@@ -14,7 +14,7 @@ import csv
 model_name = "./ETRI_KoBERT/003_bert_eojeol_pytorch"
 
 train_batch_size = 16
-
+num_epochs = 1
 model_save_path = 'output/training_nli_'+model_name.replace("/", "-")+'-'+datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
 word_embedding_model = models.Transformer(model_name, isKor=True)
@@ -57,8 +57,6 @@ with open('./KorNLUDatasets/KorSTS/tune_dev.tsv', 'rt', encoding='utf-8') as fIn
         dev_samples.append(InputExample(texts= [s1,s2], label=score))
 
 dev_evaluator = EmbeddingSimilarityEvaluator.from_input_examples(dev_samples, batch_size=train_batch_size, name='sts-dev')
-
-num_epochs = 1
 
 warmup_steps = math.ceil(len(train_dataset) * num_epochs / train_batch_size * 0.1) #10% of train data for warm-up
 logging.info("Warmup-steps: {}".format(warmup_steps))
