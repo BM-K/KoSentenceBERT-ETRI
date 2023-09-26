@@ -60,7 +60,6 @@ python con_training_sts.py  # NLI 데이터로 학습 후 STS 데이터로 Fine-
 
 ## Application Examples
 - 생성 된 문장 임베딩을 다운 스트림 애플리케이션에 사용할 수 있는 방법에 대한 몇 가지 예를 제시합니다.
-- STS + NLI pretrained 모델을 통해 진행합니다.
 
 ### Semantic Search
 SemanticSearch.py는 주어진 문장과 유사한 문장을 찾는 작업입니다.<br>
